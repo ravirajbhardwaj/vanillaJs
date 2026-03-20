@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Books Library</h1>
+      <a
+        id="github"
+        href="https://github.com/ravirajbhardwaj/bookLibrary"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><i class="ri-github-fill"></i> GitHub</a
+      >
+    </header>
+    <main class="main-content">
+      <section class="search-container">
+        <div class="search">
+          <div class="input-container">
+            <input
+              class="search-field"
+              type="text"
+              placeholder="Search Your Book..."
+              aria-label="Search for books"
+            />
+            <i class="ri-search-line icon"></i>
+          </div>
+          <div class="btn-container">
+            <button id="sortByName" class="btn">Name (A to Z)</button>
+            <button id="sortByDate" class="btn">Date (New to Old)</button>
+            <button id="view-type" class="btn">
+              <i class="ri-layout-grid-line"></i>
+              List/Grid
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="book-results">
+        <div class="card-container grid">
+          <!-- Books will be dynamically added here with JavaScript -->
+        </div>
+      </section>
+    </main>
+    <div class="pagination-container">
+      <button class="page-switch-btn prev" id="prevBtn">
+        <span> &lt; </span> Previous
+      </button>
+      <div id="pageNumbers">1 / 21</div>
+      <button class="page-switch-btn next" id="nextBtn">
+        Next<span> &gt; </span>
+      </button>
+    </div>
+    <footer>
+      <p>Designed and Developed with ❤️ By Ravi Raj</p>
+    </footer>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
